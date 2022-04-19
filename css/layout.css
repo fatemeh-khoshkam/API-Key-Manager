@@ -69,9 +69,11 @@ a {
     border: none;
     font-weight: bold;
     color: #000000b3;
+    transition: all 0.5s ease-in-out;
 }
 .btn:hover {
     cursor: pointer;
+    transform: translateY(0.3rem);
 }
 .title{
 
