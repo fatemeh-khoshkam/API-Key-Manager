@@ -1,0 +1,93 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="image/api.ico" type="image/x-icon" />
+        <title>Api Key Manager</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="css/reset.css" />
+    </head>
+    <body>
+        <section class="container">
+            <h1 class="title">API Key Manager</h1>
+            <div class="wrapper">
+                <form action="">
+                    <div class="form__input">
+                        <label for="userName">User Name</label>
+                        <div class="inputIconContainer">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="userName" id="userName" />
+                        </div>
+                    </div>
+                    <div class="form__input">
+                        <label for="userName">API Key</label>
+                        <div class="inputIconContainer">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="text" name="userName" id="API_Key" />
+                        </div>
+                    </div>
+                    <div class="form__input">
+                        <label for="userName">API Secret</label>
+                        <div class="inputIconContainer">
+                            <input
+                                type="password"
+                                name="userName"
+                                id="API_Secret"
+                            />
+                            <i class="fa-solid fa-eye" id="togglePassword"></i>
+                        </div>
+                    </div>
+                    <button
+                        type="submit"
+                        class="btn btn--sucess"
+                        id="btn_Submit"
+                    >
+                        Submit
+                    </button>
+                </form>
+                <div class="table_section">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>User Name</th>
+                                <th>API Key</th>
+                                <th>API Secret</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>meow</td>
+                                <td>54566</td>
+                                <td>306***865</td>
+                                <td>
+                                    <button
+                                        type="submit"
+                                        class="btn btn--sucess"
+                                    >
+                                        Edit
+                                    </button>
+                                    <button
+                                        type="submit"
+                                        class="btn btn--delete"
+                                    >
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="error"></div>
+        </section>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

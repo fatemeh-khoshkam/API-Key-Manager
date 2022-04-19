@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600&family=Poppins:wght@200;300;400&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+:root {
+    --blue: #5142fc;
+    --bg-dark: #14141f;
+    --bg-darker: #030303;
+    --primary-font: #ebebeb;
+    --login-color: #cbd1e1;
+
+    --border-radius-lg: 3rem;
+    --border-radius-md: 2rem;
+    --border-radius-sm: 1rem;
+
+    --font-size-sm: 0.75rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+}
+::-webkit-scrollbar {
+    width: 0.6rem;
+    height: 1.5rem;
+}
+::-webkit-scrollbar-track {
+    background-color: #abcde1;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(114, 111, 111, 0.426);
+    border-radius: 1rem;
+}
+html {
+    font-family: 'Comfortaa', cursive;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1.6rem;
+    background: linear-gradient(270deg, #c6e1ca, #abcde1);
+    background-size: 600% 600%;
+    -webkit-animation: BackgroundAnimate 10s ease infinite;
+    -moz-animation: BackgroundAnimate 10s ease infinite;
+    -o-animation: BackgroundAnimate 10s ease infinite;
+    animation: BackgroundAnimate 10s ease infinite;
+}
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+.btn {
+    font-family: inherit;
+    padding: 1rem 2.5rem;
+    outline: none;
+    border-radius: var(--border-radius-sm);
+    box-shadow: none;
+    border: none;
+    font-weight: bold;
+    color: #000000b3;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.title{
+
+    color: transparent;
+    font-size: calc(1em + 2vw);
+    font-weight: 900;
+    text-shadow: 0.03em 0.03em 0.01rem #ffffff, 0.005em 0.005em 0 #7e7abdd6;
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+
+}
+
+
+@-webkit-keyframes BackgroundAnimate {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes BackgroundAnimate {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes BackgroundAnimate {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes BackgroundAnimate {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+/**** error notif *****/
+#error {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 16px;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    bottom: 30px;
+    position: absolute;
+    background: rgb(230, 75, 75);
+    background: linear-gradient(
+        90deg,
+        rgba(230, 75, 75, 0.8690826672465861) 0%,
+        rgb(229 80 163 / 92%) 100%
+    );
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 34%);
+    font-family: 'Poppins', sans-serif;
+}
+
+#error.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
